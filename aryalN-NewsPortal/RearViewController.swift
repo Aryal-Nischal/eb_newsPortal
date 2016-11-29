@@ -11,8 +11,15 @@ import SWRevealViewController
 
 class RearViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var rearViewTableView: UITableView!
+//MARK: - Data array
+    
     let tableItem = ["Home","Profile","Favourite","Settings","Logout"]
+    
+//MARK: - Outlets
+    
+    @IBOutlet weak var rearViewTableView: UITableView!
+    
+//MARK: - Lifecycle functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +27,9 @@ class RearViewController: UIViewController, UITableViewDelegate, UITableViewData
         rearViewTableView.delegate = self
         rearViewTableView.dataSource = self
 
-        
-        // Do any additional setup after loading the view.
     }
+
+//MARK: - Table delegate and data source
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -40,32 +47,33 @@ class RearViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedCell:UITableViewCell = tableView.cellForRow(at: indexPath)!
-        selectedCell.contentView.backgroundColor = UIColor.red.withAlphaComponent(0.5)
+        selectedCell.contentView.backgroundColor = UIColor(white: 1.0, alpha:0.3)
         selectedCell.textLabel?.textColor = UIColor.white
         var controllerTo=""
         switch(indexPath.row){
         case 0:
-            controllerTo = "HomeController"
+            controllerTo = ControllerIdentity.HomeController.rawValue
             break
         case 1:
-            controllerTo = "UserProfileController"
+            controllerTo = ControllerIdentity.UserProfileController.rawValue
             break
         case 2:
-            controllerTo = "FavouriteController"
+            controllerTo = ControllerIdentity.FavouriteController.rawValue
             break
         case 3:
             //create settings page
-            controllerTo = "SignInController"
+            controllerTo = ControllerIdentity.settingsController.rawValue
             break
         case 4:
             //logout pop
-            controllerTo = "SignUpController"
+            controllerTo = ControllerIdentity.SignInController.rawValue
             break
         default:
             //error pop
-            controllerTo = "HomeController"
+            controllerTo = ControllerIdentity.HomeController.rawValue
             
         }
+        
         let controller = UIApplication.shared.keyWindow?.rootViewController
         if let revealControlHandle = controller as? SWRevealViewController{
             if let navigationControlHandle = revealControlHandle.frontViewController as? UINavigationController{

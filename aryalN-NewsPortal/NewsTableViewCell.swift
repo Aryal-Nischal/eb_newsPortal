@@ -10,10 +10,14 @@ import UIKit
 
 class NewsTableViewCell: UITableViewCell {
 
+//MARK: - Outlets
+    
     @IBOutlet weak var newsImageView: UIImageView!
     @IBOutlet weak var newsLabel: UILabel!
     @IBOutlet weak var newsLikes: UIButton!
     @IBOutlet weak var newsComments: UIButton!
+    
+//MARK: - Lifecycle functions
     
     override func awakeFromNib() {
         super.awakeFromNib()

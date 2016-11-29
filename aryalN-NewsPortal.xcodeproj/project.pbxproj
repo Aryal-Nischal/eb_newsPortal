@@ -9,11 +9,9 @@
 /* Begin PBXBuildFile section */
 		7938BEC2885DA466A8C1F89C /* Pods_aryalN_NewsPortalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A786AF7E00DE9D58BED8CD /* Pods_aryalN_NewsPortalTests.framework */; };
 		A45C27763EBBC408A4456A45 /* Pods_aryalN_NewsPortal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5233630B2D53415463D717CF /* Pods_aryalN_NewsPortal.framework */; };
-		D80076AB1DE6D9E10081BA50 /* NavbarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80076AA1DE6D9E10081BA50 /* NavbarTableViewController.swift */; };
 		D809A78C1DE537CB00EC1F61 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D809A78B1DE537CB00EC1F61 /* SignInViewController.swift */; };
 		D8210D9A1DE856C900A1ABC2 /* UserPageProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8210D991DE856C900A1ABC2 /* UserPageProfileViewController.swift */; };
 		D823CCBD1DE45EE900B0779F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D823CCBC1DE45EE900B0779F /* AppDelegate.swift */; };
-		D823CCBF1DE45EE900B0779F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D823CCBE1DE45EE900B0779F /* ViewController.swift */; };
 		D823CCC21DE45EE900B0779F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D823CCC01DE45EE900B0779F /* Main.storyboard */; };
 		D823CCC41DE45EE900B0779F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D823CCC31DE45EE900B0779F /* Assets.xcassets */; };
 		D823CCC71DE45EE900B0779F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D823CCC51DE45EE900B0779F /* LaunchScreen.storyboard */; };
@@ -27,6 +25,11 @@
 		D8BD3E8B1DE7E555002CBF4C /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD3E8A1DE7E555002CBF4C /* FavouritesViewController.swift */; };
 		D8BD3E8D1DE7FC9A002CBF4C /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD3E8C1DE7FC9A002CBF4C /* NewsTableViewCell.swift */; };
 		D8BD3E901DE804BD002CBF4C /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD3E8F1DE804BD002CBF4C /* NewsFeedViewController.swift */; };
+		D8D32AC11DED349F000114CB /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D32AC01DED349F000114CB /* Helper.swift */; };
+		D8D32AC51DED40B8000114CB /* StringStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D32AC41DED40B8000114CB /* StringStorage.swift */; };
+		D8D32ACD1DED4EFD000114CB /* CacheUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D32ACC1DED4EFD000114CB /* CacheUser.swift */; };
+		D8D32ACF1DED4F10000114CB /* ValidateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D32ACE1DED4F10000114CB /* ValidateUser.swift */; };
+		D8D32AD11DED4F3C000114CB /* ManageUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D32AD01DED4F3C000114CB /* ManageUser.swift */; };
 		D8E4EB171DE826E100DFB7A1 /* RearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4EB161DE826E100DFB7A1 /* RearViewController.swift */; };
 		E0D22C5DB8022FBD84AF66E7 /* Pods_aryalN_NewsPortalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C07361C41F41F93AA8334B6B /* Pods_aryalN_NewsPortalUITests.framework */; };
 /* End PBXBuildFile section */
@@ -57,12 +60,10 @@
 		58C13F12F5D1C998F4C02456 /* Pods-aryalN-NewsPortalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aryalN-NewsPortalTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aryalN-NewsPortalTests/Pods-aryalN-NewsPortalTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C07361C41F41F93AA8334B6B /* Pods_aryalN_NewsPortalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aryalN_NewsPortalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A786AF7E00DE9D58BED8CD /* Pods_aryalN_NewsPortalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aryalN_NewsPortalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D80076AA1DE6D9E10081BA50 /* NavbarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavbarTableViewController.swift; sourceTree = "<group>"; };
 		D809A78B1DE537CB00EC1F61 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D8210D991DE856C900A1ABC2 /* UserPageProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPageProfileViewController.swift; sourceTree = "<group>"; };
 		D823CCB91DE45EE900B0779F /* aryalN-NewsPortal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "aryalN-NewsPortal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D823CCBC1DE45EE900B0779F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D823CCBE1DE45EE900B0779F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D823CCC11DE45EE900B0779F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D823CCC31DE45EE900B0779F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D823CCC61DE45EE900B0779F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,6 +82,11 @@
 		D8BD3E8A1DE7E555002CBF4C /* FavouritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		D8BD3E8C1DE7FC9A002CBF4C /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		D8BD3E8F1DE804BD002CBF4C /* NewsFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
+		D8D32AC01DED349F000114CB /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		D8D32AC41DED40B8000114CB /* StringStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringStorage.swift; sourceTree = "<group>"; };
+		D8D32ACC1DED4EFD000114CB /* CacheUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheUser.swift; sourceTree = "<group>"; };
+		D8D32ACE1DED4F10000114CB /* ValidateUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidateUser.swift; sourceTree = "<group>"; };
+		D8D32AD01DED4F3C000114CB /* ManageUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageUser.swift; sourceTree = "<group>"; };
 		D8E4EB161DE826E100DFB7A1 /* RearViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RearViewController.swift; sourceTree = "<group>"; };
 		EBCAA02AB118206699B15EB3 /* Pods-aryalN-NewsPortalUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aryalN-NewsPortalUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aryalN-NewsPortalUITests/Pods-aryalN-NewsPortalUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,33 +145,9 @@
 		D80076A61DE6D78B0081BA50 /* RearView */ = {
 			isa = PBXGroup;
 			children = (
-				D80076A91DE6D9B10081BA50 /* TableView */,
-				D8E4EB161DE826E100DFB7A1 /* RearViewController.swift */,
+				D8D32AD51DED4FF4000114CB /* Controller */,
 			);
 			name = RearView;
-			sourceTree = "<group>";
-		};
-		D80076A91DE6D9B10081BA50 /* TableView */ = {
-			isa = PBXGroup;
-			children = (
-				D80076AA1DE6D9E10081BA50 /* NavbarTableViewController.swift */,
-			);
-			name = TableView;
-			sourceTree = "<group>";
-		};
-		D809A7891DE5377500EC1F61 /* SignInPage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = SignInPage;
-			sourceTree = "<group>";
-		};
-		D809A78A1DE5378F00EC1F61 /* SignInController */ = {
-			isa = PBXGroup;
-			children = (
-				D809A78B1DE537CB00EC1F61 /* SignInViewController.swift */,
-			);
-			name = SignInController;
 			sourceTree = "<group>";
 		};
 		D823CCB01DE45EE900B0779F = {
@@ -193,9 +175,16 @@
 		D823CCBB1DE45EE900B0779F /* aryalN-NewsPortal */ = {
 			isa = PBXGroup;
 			children = (
-				D823CCF41DE4659300B0779F /* Models */,
-				D823CCF11DE4650C00B0779F /* Views */,
-				D823CCF21DE4653500B0779F /* Controllers */,
+				D8D32AC61DED4E5B000114CB /* SignIn */,
+				D8BD3E8E1DE80490002CBF4C /* NewsFeed */,
+				D8D32AC91DED4E83000114CB /* Register */,
+				D823CCF51DE465A000B0779F /* Constants */,
+				D823CCF61DE465A900B0779F /* Helper */,
+				D80076A61DE6D78B0081BA50 /* RearView */,
+				D8BD3E891DE7E524002CBF4C /* Favourites */,
+				D8E4EB1A1DE82E4B00DFB7A1 /* UserProfilePage */,
+				D838F5101DE5BB6F008773C7 /* MainNavContainer */,
+				D823CCF11DE4650C00B0779F /* All Views */,
 				D823CCF31DE4654400B0779F /* SupportingFiles */,
 			);
 			path = "aryalN-NewsPortal";
@@ -229,28 +218,13 @@
 			name = AppFonts;
 			sourceTree = "<group>";
 		};
-		D823CCF11DE4650C00B0779F /* Views */ = {
+		D823CCF11DE4650C00B0779F /* All Views */ = {
 			isa = PBXGroup;
 			children = (
 				D823CCC01DE45EE900B0779F /* Main.storyboard */,
 				D823CCC51DE45EE900B0779F /* LaunchScreen.storyboard */,
 			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		D823CCF21DE4653500B0779F /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				D8E4EB1A1DE82E4B00DFB7A1 /* Profile */,
-				D8BD3E8E1DE80490002CBF4C /* NewsFeed */,
-				D8BD3E891DE7E524002CBF4C /* Favourites */,
-				D80076A61DE6D78B0081BA50 /* RearView */,
-				D838F5101DE5BB6F008773C7 /* MainNavigationController */,
-				D838F50D1DE5A3BB008773C7 /* SignUpController */,
-				D809A78A1DE5378F00EC1F61 /* SignInController */,
-				D823CCBE1DE45EE900B0779F /* ViewController.swift */,
-			);
-			name = Controllers;
+			name = "All Views";
 			sourceTree = "<group>";
 		};
 		D823CCF31DE4654400B0779F /* SupportingFiles */ = {
@@ -264,19 +238,10 @@
 			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		D823CCF41DE4659300B0779F /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				D809A7891DE5377500EC1F61 /* SignInPage */,
-				D823CCF61DE465A900B0779F /* Helper */,
-				D823CCF51DE465A000B0779F /* Constants */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
 		D823CCF51DE465A000B0779F /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				D8D32AC41DED40B8000114CB /* StringStorage.swift */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -284,24 +249,17 @@
 		D823CCF61DE465A900B0779F /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				D8D32AC01DED349F000114CB /* Helper.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
 		};
-		D838F50D1DE5A3BB008773C7 /* SignUpController */ = {
+		D838F5101DE5BB6F008773C7 /* MainNavContainer */ = {
 			isa = PBXGroup;
 			children = (
-				D838F50E1DE5A3FC008773C7 /* SignUpViewController.swift */,
+				D8D32AD21DED4F87000114CB /* Controller */,
 			);
-			name = SignUpController;
-			sourceTree = "<group>";
-		};
-		D838F5101DE5BB6F008773C7 /* MainNavigationController */ = {
-			isa = PBXGroup;
-			children = (
-				D838F5111DE5BD48008773C7 /* SigningNavigationViewController.swift */,
-			);
-			name = MainNavigationController;
+			name = MainNavContainer;
 			sourceTree = "<group>";
 		};
 		D8BD3E891DE7E524002CBF4C /* Favourites */ = {
@@ -316,17 +274,100 @@
 		D8BD3E8E1DE80490002CBF4C /* NewsFeed */ = {
 			isa = PBXGroup;
 			children = (
-				D8BD3E8F1DE804BD002CBF4C /* NewsFeedViewController.swift */,
+				D8D32AD41DED4FD8000114CB /* Controller */,
 			);
 			name = NewsFeed;
 			sourceTree = "<group>";
 		};
-		D8E4EB1A1DE82E4B00DFB7A1 /* Profile */ = {
+		D8D32AC61DED4E5B000114CB /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				D8D32AC71DED4E63000114CB /* Model */,
+				D8D32AC81DED4E6C000114CB /* Controller */,
+			);
+			name = SignIn;
+			sourceTree = "<group>";
+		};
+		D8D32AC71DED4E63000114CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D8D32ACC1DED4EFD000114CB /* CacheUser.swift */,
+				D8D32ACE1DED4F10000114CB /* ValidateUser.swift */,
+				D8D32AD01DED4F3C000114CB /* ManageUser.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D8D32AC81DED4E6C000114CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D809A78B1DE537CB00EC1F61 /* SignInViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D8D32AC91DED4E83000114CB /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				D8D32ACB1DED4E9A000114CB /* Model */,
+				D8D32ACA1DED4E92000114CB /* Controller */,
+			);
+			name = Register;
+			sourceTree = "<group>";
+		};
+		D8D32ACA1DED4E92000114CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D838F50E1DE5A3FC008773C7 /* SignUpViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D8D32ACB1DED4E9A000114CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D8D32AD21DED4F87000114CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D838F5111DE5BD48008773C7 /* SigningNavigationViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D8D32AD31DED4FB5000114CB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				D8210D991DE856C900A1ABC2 /* UserPageProfileViewController.swift */,
 			);
-			name = Profile;
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D8D32AD41DED4FD8000114CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D8BD3E8F1DE804BD002CBF4C /* NewsFeedViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D8D32AD51DED4FF4000114CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D8E4EB161DE826E100DFB7A1 /* RearViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D8E4EB1A1DE82E4B00DFB7A1 /* UserProfilePage */ = {
+			isa = PBXGroup;
+			children = (
+				D8D32AD31DED4FB5000114CB /* Controller */,
+			);
+			name = UserProfilePage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -600,15 +641,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D823CCBF1DE45EE900B0779F /* ViewController.swift in Sources */,
-				D80076AB1DE6D9E10081BA50 /* NavbarTableViewController.swift in Sources */,
 				D8BD3E901DE804BD002CBF4C /* NewsFeedViewController.swift in Sources */,
+				D8D32AD11DED4F3C000114CB /* ManageUser.swift in Sources */,
+				D8D32ACD1DED4EFD000114CB /* CacheUser.swift in Sources */,
 				D8210D9A1DE856C900A1ABC2 /* UserPageProfileViewController.swift in Sources */,
 				D8BD3E8D1DE7FC9A002CBF4C /* NewsTableViewCell.swift in Sources */,
 				D8E4EB171DE826E100DFB7A1 /* RearViewController.swift in Sources */,
 				D823CCBD1DE45EE900B0779F /* AppDelegate.swift in Sources */,
 				D838F50F1DE5A3FC008773C7 /* SignUpViewController.swift in Sources */,
+				D8D32AC51DED40B8000114CB /* StringStorage.swift in Sources */,
+				D8D32ACF1DED4F10000114CB /* ValidateUser.swift in Sources */,
 				D809A78C1DE537CB00EC1F61 /* SignInViewController.swift in Sources */,
+				D8D32AC11DED349F000114CB /* Helper.swift in Sources */,
 				D8BD3E8B1DE7E555002CBF4C /* FavouritesViewController.swift in Sources */,
 				D838F5121DE5BD49008773C7 /* SigningNavigationViewController.swift in Sources */,
 			);
