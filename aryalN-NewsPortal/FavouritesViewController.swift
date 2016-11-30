@@ -1,5 +1,5 @@
 //
-//  NewsFeedViewController.swift
+//  FavouritesViewController.swift
 //  aryalN-NewsPortal
 //
 //  Created by dev9 on 11/25/16.
@@ -8,39 +8,47 @@
 
 import UIKit
 
-class NewsFeedViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
-
-//MARK: - DATA Array
+class FavouritesViewController: UIViewController, UITableViewDataSource,  UITableViewDelegate {
     
-    let test = ["Testing","Testing","Testing","Testing","Testing"]
-
 //MARK: - Outlets
     
-    @IBOutlet weak var newsFeedTableView: UITableView!
+    @IBOutlet weak var favouriteItemList: UITableView!
     
-//MARK: - View Lifecycle Functions
+//MARK: - DataArray
     
+    let swiftBlogs = ["Ray Wenderlich", "NSHipster", "iOS Developer Tips", "Jameson Quave", "Natasha The Robot", "Coding Explorer", "That Thing In Swift", "Andrew Bancroft", "iAchieved.it", "Airspeed Velocity"]
+    
+    
+//MARK: - LifecycleMethods
     override func viewDidLoad() {
         super.viewDidLoad()
-        newsFeedTableView.delegate = self
-        newsFeedTableView.dataSource = self
-        
+        favouriteItemList.delegate = self
+        favouriteItemList.dataSource = self
         revealRearView()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
         customNavBarCreation()
     }
     
-//MARK: - Delegate and Datasource functions
+//MARK: - Table Delegate and Datasource Methods
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return test.count
+        return swiftBlogs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "favouriteListItem", for: indexPath) as! NewsTableViewCell
-        cell.newsLabel.text = test[indexPath.row]
+        cell.newsLabel.text = swiftBlogs[indexPath.row]
+        
         return cell
     }
-    
+
 //MARK: - Custom Button Method
     
     //For toggling the navigation bar on/off
@@ -66,5 +74,5 @@ class NewsFeedViewController: UIViewController,UITableViewDataSource, UITableVie
         self.revealViewController().rearViewRevealWidth = self.view.bounds.size.width
         self.revealViewController().rearViewRevealOverdraw = CGFloat(0.0)
     }
-
+    
 }

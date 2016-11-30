@@ -11,6 +11,7 @@ import SWRevealViewController
 
 class RearViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var usernameLabel: UILabel!
 //MARK: - Data array
     
     let tableItem = ["Home","Profile","Favourite","Settings","Logout"]
@@ -26,7 +27,25 @@ class RearViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         rearViewTableView.delegate = self
         rearViewTableView.dataSource = self
-
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        let currentUser:CacheUserData?
+        if let x = UserDefaults.standard.object(forKey: DefaultKeys.appuser.rawValue) as? NSData{
+            currentUser = NSKeyedUnarchiver.unarchiveObject(with: x as Data) as! CacheUserData?
+            usernameLabel.text = currentUser?.username
+        }
+    }
+    
+//MARK: - Button Methods
+    
+    @IBAction func toogleRearViewButtonPressed(_ sender: AnyObject) {
+        revealViewController().revealToggle(animated: true)
     }
 
 //MARK: - Table delegate and data source
@@ -66,6 +85,7 @@ class RearViewController: UIViewController, UITableViewDelegate, UITableViewData
             break
         case 4:
             //logout pop
+            UserDefaults.standard.removeObject(forKey: DefaultKeys.appuser.rawValue)
             controllerTo = ControllerIdentity.SignInController.rawValue
             break
         default:

@@ -10,6 +10,7 @@
 		7938BEC2885DA466A8C1F89C /* Pods_aryalN_NewsPortalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A786AF7E00DE9D58BED8CD /* Pods_aryalN_NewsPortalTests.framework */; };
 		A45C27763EBBC408A4456A45 /* Pods_aryalN_NewsPortal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5233630B2D53415463D717CF /* Pods_aryalN_NewsPortal.framework */; };
 		D809A78C1DE537CB00EC1F61 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D809A78B1DE537CB00EC1F61 /* SignInViewController.swift */; };
+		D80F3B841DEE9B4A006D01E9 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F3B831DEE9B4A006D01E9 /* FavouritesViewController.swift */; };
 		D8210D9A1DE856C900A1ABC2 /* UserPageProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8210D991DE856C900A1ABC2 /* UserPageProfileViewController.swift */; };
 		D823CCBD1DE45EE900B0779F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D823CCBC1DE45EE900B0779F /* AppDelegate.swift */; };
 		D823CCC21DE45EE900B0779F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D823CCC01DE45EE900B0779F /* Main.storyboard */; };
@@ -22,7 +23,6 @@
 		D823CCF01DE463B400B0779F /* Exo-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D823CCED1DE463B400B0779F /* Exo-Regular.otf */; };
 		D838F50F1DE5A3FC008773C7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838F50E1DE5A3FC008773C7 /* SignUpViewController.swift */; };
 		D838F5121DE5BD49008773C7 /* SigningNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838F5111DE5BD48008773C7 /* SigningNavigationViewController.swift */; };
-		D8BD3E8B1DE7E555002CBF4C /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD3E8A1DE7E555002CBF4C /* FavouritesViewController.swift */; };
 		D8BD3E8D1DE7FC9A002CBF4C /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD3E8C1DE7FC9A002CBF4C /* NewsTableViewCell.swift */; };
 		D8BD3E901DE804BD002CBF4C /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD3E8F1DE804BD002CBF4C /* NewsFeedViewController.swift */; };
 		D8D32AC11DED349F000114CB /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D32AC01DED349F000114CB /* Helper.swift */; };
@@ -61,6 +61,7 @@
 		C07361C41F41F93AA8334B6B /* Pods_aryalN_NewsPortalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aryalN_NewsPortalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A786AF7E00DE9D58BED8CD /* Pods_aryalN_NewsPortalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aryalN_NewsPortalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D809A78B1DE537CB00EC1F61 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		D80F3B831DEE9B4A006D01E9 /* FavouritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		D8210D991DE856C900A1ABC2 /* UserPageProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPageProfileViewController.swift; sourceTree = "<group>"; };
 		D823CCB91DE45EE900B0779F /* aryalN-NewsPortal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "aryalN-NewsPortal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D823CCBC1DE45EE900B0779F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +80,6 @@
 		D823CCED1DE463B400B0779F /* Exo-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Regular.otf"; sourceTree = "<group>"; };
 		D838F50E1DE5A3FC008773C7 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D838F5111DE5BD48008773C7 /* SigningNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigningNavigationViewController.swift; sourceTree = "<group>"; };
-		D8BD3E8A1DE7E555002CBF4C /* FavouritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		D8BD3E8C1DE7FC9A002CBF4C /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		D8BD3E8F1DE804BD002CBF4C /* NewsFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
 		D8D32AC01DED349F000114CB /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
@@ -265,8 +265,8 @@
 		D8BD3E891DE7E524002CBF4C /* Favourites */ = {
 			isa = PBXGroup;
 			children = (
-				D8BD3E8A1DE7E555002CBF4C /* FavouritesViewController.swift */,
 				D8BD3E8C1DE7FC9A002CBF4C /* NewsTableViewCell.swift */,
+				D80F3B831DEE9B4A006D01E9 /* FavouritesViewController.swift */,
 			);
 			name = Favourites;
 			sourceTree = "<group>";
@@ -653,7 +653,7 @@
 				D8D32ACF1DED4F10000114CB /* ValidateUser.swift in Sources */,
 				D809A78C1DE537CB00EC1F61 /* SignInViewController.swift in Sources */,
 				D8D32AC11DED349F000114CB /* Helper.swift in Sources */,
-				D8BD3E8B1DE7E555002CBF4C /* FavouritesViewController.swift in Sources */,
+				D80F3B841DEE9B4A006D01E9 /* FavouritesViewController.swift in Sources */,
 				D838F5121DE5BD49008773C7 /* SigningNavigationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

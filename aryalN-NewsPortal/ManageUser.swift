@@ -11,7 +11,7 @@ import Alamofire
 
 class ManageUser{
     
-    // loginUrl should be provided
+    // loginUrl should be provided  
     //loginProcess??
     
     func Login(){

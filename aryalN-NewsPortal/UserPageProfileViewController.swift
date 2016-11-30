@@ -14,27 +14,35 @@ class UserPageProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        customNavBarCreation(controllerHandle: self)
-        revealRearView(controllerHandle: self)
+        customNavBarCreation()
+        revealRearView()
         
     }
 
-//MARK: - View Customization Methods
+    //MARK: - Custom Button Method
+    
+    //For toggling the navigation bar on/off
+    @IBAction func navbarButton(_ sender: AnyObject) {
+        self.revealViewController().revealToggle(animated: true)
+    }
+    
+    //MARK: - View Customization Methods
     
     //For making navigation bar transparent
-    func customNavBarCreation(controllerHandle:UIViewController){
-        controllerHandle.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        controllerHandle.navigationController?.navigationBar.shadowImage = UIImage()
-        controllerHandle.navigationController?.navigationBar.isTranslucent = true
-        controllerHandle.navigationController?.view.backgroundColor = UIColor.clear
-        controllerHandle.navigationController?.navigationBar.tintColor = UIColor.white
+    func customNavBarCreation(){
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = UIColor.clear
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white, NSFontAttributeName:UIFont(name:"Exo-Medium",size:18)!]
     }
     
     //For revealing rearview with gesture
-    func revealRearView(controllerHandle:UIViewController){
-        controllerHandle.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        controllerHandle.revealViewController().rearViewRevealWidth = self.view.bounds.size.width
-        controllerHandle.revealViewController().rearViewRevealOverdraw = CGFloat(0.0)
+    func revealRearView(){
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        self.revealViewController().rearViewRevealWidth = self.view.bounds.size.width
+        self.revealViewController().rearViewRevealOverdraw = CGFloat(0.0)
     }
 
 }

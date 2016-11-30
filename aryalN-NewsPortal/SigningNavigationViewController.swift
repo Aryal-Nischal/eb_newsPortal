@@ -9,28 +9,28 @@
 import UIKit
 
 class SigningNavigationViewController: UINavigationController {
-
+    
+//MARK: - Lifecycle function
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.selectViewController()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+//MARK: - View Selecting Method
     
+    //Setting appropriate view controller to the Navigation container at runtime
     func selectViewController(){
         
-        let userExistance = UserDefaults.standard.object(forKey: DefaultKeys.appuser.rawValue) as? NSData
+        let helperHandle = Helper.instance
         
-        if((userExistance) != nil){
-            self.setViewControllers([(storyboard?.instantiateViewController(withIdentifier: ControllerIdentity.HomeController.rawValue))!], animated: true)
-
-        }
-        else{
-            self.setViewControllers([(storyboard?.instantiateViewController(withIdentifier: ControllerIdentity.SignInController.rawValue))!], animated: true)
-
+        helperHandle.getUserDefaults(key: .appuser) {(currentUser) in
+            if(currentUser != nil){
+                self.setViewControllers([(storyboard?.instantiateViewController(withIdentifier: ControllerIdentity.HomeController.rawValue))!], animated: true)
+            }
+            else{
+                self.setViewControllers([(storyboard?.instantiateViewController(withIdentifier: ControllerIdentity.SignInController.rawValue))!], animated: true)
+            }
         }
     }
 

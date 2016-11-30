@@ -16,40 +16,36 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var passwordTextfield: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     
-    
-    
 //MARK: - Lifecycle Functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        revealRearView(controllerHandle: self)
-        customNavBarCreation(controllerHandle: self)
-
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        
-        signInButton.layer.cornerRadius = signInButton.bounds.size.height / 2.0
-        
-        editTextField(usernameTextfield)
-        editTextField(passwordTextfield)
-
+        navigationController?.isNavigationBarHidden = true
+        self.customizeView()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        self.navigationController?.isNavigationBarHidden = false
     }
 
-    
 //MARK: - Button Methods
     
     @IBAction func signinButtonPressed(_ sender: AnyObject) {
-       // self.navigationController?.pushViewController(SignUpViewController, animated: true)
+       
         let object = ValidateUser(username: usernameTextfield.text!,password: passwordTextfield.text!)
+        let userObject = CacheUserData(username: usernameTextfield.text!)
+        
         object.areAllFieldsValid {[weak self] (success, error) in
             if let weakSelf = self{
                 if(success){
-                    let x = CacheUserData(username: weakSelf.usernameTextfield.text!)
-                    UserDefaults.standard.setValue(x, forKey: DefaultKeys.appuser.rawValue)
-                    weakSelf.gotoHomeScreen()
+                   let currentUser = NSKeyedArchiver.archivedData(withRootObject: userObject)
+                    UserDefaults.standard.set(currentUser, forKey: DefaultKeys.appuser.rawValue)
+                    weakSelf.gotoHomeScreen(controllerName: .HomeController)
                 }
                 else{print(error)}
             }
@@ -62,11 +58,11 @@ class SignInViewController: UIViewController {
     
 //MARK: - Goto home screen
     
-    func gotoHomeScreen(){
+    func gotoHomeScreen(controllerName:ControllerIdentity){
         let controller = UIApplication.shared.keyWindow?.rootViewController
         if let revealControlHandle = controller as? SWRevealViewController{
             if let navigationControlHandle = revealControlHandle.frontViewController as? UINavigationController{
-                navigationControlHandle.setViewControllers([(storyboard?.instantiateViewController(withIdentifier: ControllerIdentity.HomeController.rawValue))!], animated: true)
+                navigationControlHandle.setViewControllers([(storyboard?.instantiateViewController(withIdentifier: controllerName.rawValue))!], animated: true)
                 
             }
         }
@@ -74,20 +70,11 @@ class SignInViewController: UIViewController {
     
 //MARK: - View Customization Methods
     
-    //For making navigation bar transparent
-    func customNavBarCreation(controllerHandle:UIViewController){
-        controllerHandle.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        controllerHandle.navigationController?.navigationBar.shadowImage = UIImage()
-        controllerHandle.navigationController?.navigationBar.isTranslucent = true
-        controllerHandle.navigationController?.view.backgroundColor = UIColor.clear
-        controllerHandle.navigationController?.navigationBar.tintColor = UIColor.white
-    }
-    
-    //For revealing rearview with gesture
-    func revealRearView(controllerHandle:UIViewController){
-        controllerHandle.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        controllerHandle.revealViewController().rearViewRevealWidth = self.view.bounds.size.width
-        controllerHandle.revealViewController().rearViewRevealOverdraw = CGFloat(0.0)
+    //Editing buttons and textfields
+    func customizeView(){
+        signInButton.layer.cornerRadius = signInButton.bounds.size.height / 2.0
+        editTextField(usernameTextfield)
+        editTextField(passwordTextfield)
     }
     
     //For adding design to text field

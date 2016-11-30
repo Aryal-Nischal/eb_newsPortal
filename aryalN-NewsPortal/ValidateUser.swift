@@ -52,6 +52,7 @@ class ValidateUser{
         
         dataValidity(success,errorMessage)
             
-        }
+    }
+    
 }
 
