@@ -11,11 +11,11 @@
 		A45C27763EBBC408A4456A45 /* Pods_aryalN_NewsPortal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5233630B2D53415463D717CF /* Pods_aryalN_NewsPortal.framework */; };
 		D809A78C1DE537CB00EC1F61 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D809A78B1DE537CB00EC1F61 /* SignInViewController.swift */; };
 		D80F3B841DEE9B4A006D01E9 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F3B831DEE9B4A006D01E9 /* FavouritesViewController.swift */; };
+		D80F3B881DEEC3A6006D01E9 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F3B871DEEC3A6006D01E9 /* ProfileTableViewController.swift */; };
+		D80F3B8D1DEEC89D006D01E9 /* SignInViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F3B8C1DEEC89D006D01E9 /* SignInViewControllerTestCase.swift */; };
 		D8210D9A1DE856C900A1ABC2 /* UserPageProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8210D991DE856C900A1ABC2 /* UserPageProfileViewController.swift */; };
 		D823CCBD1DE45EE900B0779F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D823CCBC1DE45EE900B0779F /* AppDelegate.swift */; };
-		D823CCC21DE45EE900B0779F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D823CCC01DE45EE900B0779F /* Main.storyboard */; };
 		D823CCC41DE45EE900B0779F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D823CCC31DE45EE900B0779F /* Assets.xcassets */; };
-		D823CCC71DE45EE900B0779F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D823CCC51DE45EE900B0779F /* LaunchScreen.storyboard */; };
 		D823CCD21DE45EE900B0779F /* aryalN_NewsPortalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D823CCD11DE45EE900B0779F /* aryalN_NewsPortalTests.swift */; };
 		D823CCDD1DE45EE900B0779F /* aryalN_NewsPortalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D823CCDC1DE45EE900B0779F /* aryalN_NewsPortalUITests.swift */; };
 		D823CCEE1DE463B400B0779F /* Exo-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D823CCEB1DE463B400B0779F /* Exo-Bold.otf */; };
@@ -30,7 +30,10 @@
 		D8D32ACD1DED4EFD000114CB /* CacheUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D32ACC1DED4EFD000114CB /* CacheUser.swift */; };
 		D8D32ACF1DED4F10000114CB /* ValidateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D32ACE1DED4F10000114CB /* ValidateUser.swift */; };
 		D8D32AD11DED4F3C000114CB /* ManageUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D32AD01DED4F3C000114CB /* ManageUser.swift */; };
+		D8D772781DEEF0380091B04D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D772761DEEF0380091B04D /* Main.storyboard */; };
+		D8D7727A1DEEF11A0091B04D /* raidercrusaderchrome-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8D772791DEEF11A0091B04D /* raidercrusaderchrome-Regular.ttf */; };
 		D8E4EB171DE826E100DFB7A1 /* RearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E4EB161DE826E100DFB7A1 /* RearViewController.swift */; };
+		D8FBF0011DEFBF9400355463 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8FBF0001DEFBF9400355463 /* LaunchScreen.storyboard */; };
 		E0D22C5DB8022FBD84AF66E7 /* Pods_aryalN_NewsPortalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C07361C41F41F93AA8334B6B /* Pods_aryalN_NewsPortalUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,12 +65,12 @@
 		C7A786AF7E00DE9D58BED8CD /* Pods_aryalN_NewsPortalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aryalN_NewsPortalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D809A78B1DE537CB00EC1F61 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D80F3B831DEE9B4A006D01E9 /* FavouritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		D80F3B871DEEC3A6006D01E9 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		D80F3B8C1DEEC89D006D01E9 /* SignInViewControllerTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewControllerTestCase.swift; sourceTree = "<group>"; };
 		D8210D991DE856C900A1ABC2 /* UserPageProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPageProfileViewController.swift; sourceTree = "<group>"; };
 		D823CCB91DE45EE900B0779F /* aryalN-NewsPortal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "aryalN-NewsPortal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D823CCBC1DE45EE900B0779F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D823CCC11DE45EE900B0779F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D823CCC31DE45EE900B0779F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D823CCC61DE45EE900B0779F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D823CCC81DE45EE900B0779F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D823CCCD1DE45EE900B0779F /* aryalN-NewsPortalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "aryalN-NewsPortalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D823CCD11DE45EE900B0779F /* aryalN_NewsPortalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aryalN_NewsPortalTests.swift; sourceTree = "<group>"; };
@@ -87,7 +90,10 @@
 		D8D32ACC1DED4EFD000114CB /* CacheUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheUser.swift; sourceTree = "<group>"; };
 		D8D32ACE1DED4F10000114CB /* ValidateUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidateUser.swift; sourceTree = "<group>"; };
 		D8D32AD01DED4F3C000114CB /* ManageUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageUser.swift; sourceTree = "<group>"; };
+		D8D772761DEEF0380091B04D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D8D772791DEEF11A0091B04D /* raidercrusaderchrome-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "raidercrusaderchrome-Regular.ttf"; sourceTree = "<group>"; };
 		D8E4EB161DE826E100DFB7A1 /* RearViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RearViewController.swift; sourceTree = "<group>"; };
+		D8FBF0001DEFBF9400355463 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBCAA02AB118206699B15EB3 /* Pods-aryalN-NewsPortalUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aryalN-NewsPortalUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aryalN-NewsPortalUITests/Pods-aryalN-NewsPortalUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +156,14 @@
 			name = RearView;
 			sourceTree = "<group>";
 		};
+		D80F3B891DEEC5A5006D01E9 /* SignInTests */ = {
+			isa = PBXGroup;
+			children = (
+				D80F3B8C1DEEC89D006D01E9 /* SignInViewControllerTestCase.swift */,
+			);
+			name = SignInTests;
+			sourceTree = "<group>";
+		};
 		D823CCB01DE45EE900B0779F = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +207,7 @@
 		D823CCD01DE45EE900B0779F /* aryalN-NewsPortalTests */ = {
 			isa = PBXGroup;
 			children = (
+				D80F3B891DEEC5A5006D01E9 /* SignInTests */,
 				D823CCD11DE45EE900B0779F /* aryalN_NewsPortalTests.swift */,
 				D823CCD31DE45EE900B0779F /* Info.plist */,
 			);
@@ -211,6 +226,7 @@
 		D823CCEA1DE462C300B0779F /* AppFonts */ = {
 			isa = PBXGroup;
 			children = (
+				D8D772791DEEF11A0091B04D /* raidercrusaderchrome-Regular.ttf */,
 				D823CCEB1DE463B400B0779F /* Exo-Bold.otf */,
 				D823CCEC1DE463B400B0779F /* Exo-Medium.otf */,
 				D823CCED1DE463B400B0779F /* Exo-Regular.otf */,
@@ -221,8 +237,8 @@
 		D823CCF11DE4650C00B0779F /* All Views */ = {
 			isa = PBXGroup;
 			children = (
-				D823CCC01DE45EE900B0779F /* Main.storyboard */,
-				D823CCC51DE45EE900B0779F /* LaunchScreen.storyboard */,
+				D8FBF0001DEFBF9400355463 /* LaunchScreen.storyboard */,
+				D8D772761DEEF0380091B04D /* Main.storyboard */,
 			);
 			name = "All Views";
 			sourceTree = "<group>";
@@ -342,6 +358,7 @@
 			isa = PBXGroup;
 			children = (
 				D8210D991DE856C900A1ABC2 /* UserPageProfileViewController.swift */,
+				D80F3B871DEEC3A6006D01E9 /* ProfileTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -488,12 +505,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8D7727A1DEEF11A0091B04D /* raidercrusaderchrome-Regular.ttf in Resources */,
 				D823CCEF1DE463B400B0779F /* Exo-Medium.otf in Resources */,
-				D823CCC71DE45EE900B0779F /* LaunchScreen.storyboard in Resources */,
 				D823CCEE1DE463B400B0779F /* Exo-Bold.otf in Resources */,
 				D823CCF01DE463B400B0779F /* Exo-Regular.otf in Resources */,
+				D8FBF0011DEFBF9400355463 /* LaunchScreen.storyboard in Resources */,
+				D8D772781DEEF0380091B04D /* Main.storyboard in Resources */,
 				D823CCC41DE45EE900B0779F /* Assets.xcassets in Resources */,
-				D823CCC21DE45EE900B0779F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,6 +665,7 @@
 				D8210D9A1DE856C900A1ABC2 /* UserPageProfileViewController.swift in Sources */,
 				D8BD3E8D1DE7FC9A002CBF4C /* NewsTableViewCell.swift in Sources */,
 				D8E4EB171DE826E100DFB7A1 /* RearViewController.swift in Sources */,
+				D80F3B881DEEC3A6006D01E9 /* ProfileTableViewController.swift in Sources */,
 				D823CCBD1DE45EE900B0779F /* AppDelegate.swift in Sources */,
 				D838F50F1DE5A3FC008773C7 /* SignUpViewController.swift in Sources */,
 				D8D32AC51DED40B8000114CB /* StringStorage.swift in Sources */,
@@ -662,6 +681,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D80F3B8D1DEEC89D006D01E9 /* SignInViewControllerTestCase.swift in Sources */,
 				D823CCD21DE45EE900B0779F /* aryalN_NewsPortalTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -688,25 +708,6 @@
 			targetProxy = D823CCD91DE45EE900B0779F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		D823CCC01DE45EE900B0779F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D823CCC11DE45EE900B0779F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D823CCC51DE45EE900B0779F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D823CCC61DE45EE900B0779F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D823CCDF1DE45EE900B0779F /* Debug */ = {
