@@ -9,7 +9,18 @@
 import Foundation
 import Alamofire
 
+
+
+let sharedUserManager = ManageUser.instance
+
 class ManageUser{
+    static let instance = ManageUser()
+    
+    
+    func save(user: UserModel) {
+        
+    }
+    
     
     // loginUrl should be provided  
     //loginProcess??
@@ -28,6 +39,13 @@ class ManageUser{
             }
             else{print("error")}
         }
+    }
+    
+    
+    func dummy() {
+        
+        let user = CacheUserData(username: "username")
+        user.save()
     }
     
 }

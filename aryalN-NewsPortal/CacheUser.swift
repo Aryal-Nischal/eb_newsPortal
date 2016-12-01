@@ -36,4 +36,33 @@ class CacheUserData: NSObject , NSCoding {
     func encode(with aCoder: NSCoder) {
         aCoder.encode(self.username,forKey:DefaultKeys.username.rawValue)
     }
+    
+    
+    func save() {
+        sharedUserManager.save(user: self)
+    }
 }
+
+
+/*
+ ,let email = decoder.decodeObject(forKey: DefaultKeys.email.rawValue) as? String
+ ,let password = decoder.decodeObject(forKey: DefaultKeys.password.rawValue) as? String
+*/
+
+/*
+ aCoder.encode(self.email,forKey:DefaultKeys.email.rawValue)
+ aCoder.encode(self.password,forKey:DefaultKeys.password.rawValue)
+*/
+
+/*
+ ,email:String,password:String
+ self.email = email
+ self.password = password
+ */
+
+/*
+ 
+ var password = String()
+ var email = String()
+ 
+ */

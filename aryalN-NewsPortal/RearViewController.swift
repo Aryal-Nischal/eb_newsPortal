@@ -35,9 +35,9 @@ class RearViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        let currentUser:CacheUserData?
+        let currentUser:UserModel?
         if let x = UserDefaults.standard.object(forKey: DefaultKeys.appuser.rawValue) as? NSData{
-            currentUser = NSKeyedUnarchiver.unarchiveObject(with: x as Data) as! CacheUserData?
+            currentUser = NSKeyedUnarchiver.unarchiveObject(with: x as Data) as! UserModel?
             usernameLabel.text = currentUser?.username
         }
     }

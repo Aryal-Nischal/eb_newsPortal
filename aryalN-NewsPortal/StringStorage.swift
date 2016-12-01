@@ -8,6 +8,13 @@
 
 import Foundation
 
+enum Storyboards : String{
+    
+    case Userboard
+    case Newsboard
+    
+}
+
 enum ControllerIdentity : String{
     
     case HomeController
@@ -21,6 +28,8 @@ enum ControllerIdentity : String{
 enum DefaultKeys:String {
     
     case username
+    case userEmail
+    case userAccessCode
     case appuser
     
 }
@@ -31,6 +40,66 @@ enum RegexConst:String{
     case Password = "^\\S{6,}$"
     case Phone = "/^0[0-8]\\d{8}$/g"
     case Name = "^[\\p{L} .'-]+$"
-
     
 }
+
+enum ForServerCall:String{
+    
+    case currentDeviceID = "CurrentDeviceIdentifierString"
+    case domain = "http://192.168.0.180/ci/BookRest/test/"
+    
+}
+
+enum Trigger:String{
+
+    case login
+    case register
+    case getdata
+    
+}
+
+enum FullDomainName:CustomStringConvertible{
+    
+    case fullname(Trigger)
+    
+    var description: String{
+        switch self {
+        case let .fullname(trigger):
+            return "\(ForServerCall.domain.rawValue)\(trigger.rawValue)"
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

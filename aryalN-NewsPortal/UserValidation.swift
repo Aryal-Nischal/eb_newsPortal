@@ -1,8 +1,8 @@
 //
-//  ValidateUser.swift
+//  UserValidation.swift
 //  aryalN-NewsPortal
 //
-//  Created by dev9 on 11/29/16.
+//  Created by dev9 on 12/1/16.
 //  Copyright © 2016 ebpearls. All rights reserved.
 //
 
@@ -10,7 +10,9 @@ import Foundation
 
 typealias successClosureHandler = (_ success: Bool,_ error:String)->()
 
-class ValidateUser: Validable {
+
+
+class UserValidation: Validable {
     
     //MARK: - Variables
     var username = String()
@@ -21,6 +23,9 @@ class ValidateUser: Validable {
         self.username = username
         self.password = password
     }
+    
+    
+    
     
     //MARK: - Validate Methods
     
@@ -51,7 +56,7 @@ class ValidateUser: Validable {
         }
         
         dataValidity(success,errorMessage)
-            
+        
     }
     
 }

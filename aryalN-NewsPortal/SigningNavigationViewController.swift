@@ -22,16 +22,16 @@ class SigningNavigationViewController: UINavigationController {
     //Setting appropriate view controller to the Navigation container at runtime
     func selectViewController(){
         
-        let helperHandle = Helper.instance
-        
-        helperHandle.getUserDefaults(key: .appuser) {(currentUser) in
-            if(currentUser != nil){
-                self.setViewControllers([(storyboard?.instantiateViewController(withIdentifier: ControllerIdentity.HomeController.rawValue))!], animated: true)
-            }
-            else{
+//        let helperHandle = Helper.instance
+//        
+//        helperHandle.getUserDefaults(key: .appuser) {(currentUser) in
+//            if(currentUser != nil){
+//                self.setViewControllers([(storyboard?.instantiateViewController(withIdentifier: ControllerIdentity.HomeController.rawValue))!], animated: true)
+//            }
+//            else{
                 self.setViewControllers([(storyboard?.instantiateViewController(withIdentifier: ControllerIdentity.SignInController.rawValue))!], animated: true)
-            }
-        }
+//            }
+//        }
     }
 
 }

@@ -36,25 +36,71 @@ class SignInViewController: UIViewController {
 //MARK: - Button Methods
     
     @IBAction func signinButtonPressed(_ sender: AnyObject) {
-       
-        let object = ValidateUser(username: usernameTextfield.text!,password: passwordTextfield.text!)
-        let userObject = CacheUserData(username: usernameTextfield.text!)
-        
-        object.areAllFieldsValid {[weak self] (success, error) in
+
+        let userValidateObject = UserValidation(username: usernameTextfield.text!, password: passwordTextfield.text!)
+        userValidateObject.areAllFieldsValid { [weak self](result, error) in
             if let weakSelf = self{
-                if(success){
-                   let currentUser = NSKeyedArchiver.archivedData(withRootObject: userObject)
-                    UserDefaults.standard.set(currentUser, forKey: DefaultKeys.appuser.rawValue)
-                    weakSelf.gotoHomeScreen(controllerName: .HomeController)
+                
+                if(result == true){
+                    //Success validating go to server for data
+                    weakSelf.callServerForData()
                 }
-                else{print(error)}
+                else{
+                    //give user reason for failure
+                    weakSelf.alertDisplay(title: "Error", description: error)
+                }
+                
             }
         }
+        
+//        let object = UserValidation(username: usernameTextfield.text!,password: passwordTextfield.text!)
+//        let userObject = UserModel(username: usernameTextfield.text!)
+//        
+//        object.areAllFieldsValid {[weak self] (success, error) in
+//            if let weakSelf = self{
+//                if(success){
+//                    userObject.save()
+//                    weakSelf.gotoHomeScreen(controllerName: .HomeController)
+//                }
+//                else{print(error)}
+//            }
+//        }
     }
     
     @IBAction func signupButtonPressed(_ sender: AnyObject) {
         self.view.endEditing(true)
     }
+    
+    
+//MARK: - Custom Methods
+    
+    func callServerForData(){
+        sharedUserManager.Login(validUsername:usernameTextfield.text!,validPassword:passwordTextfield.text!){
+            [weak self](data,error) in
+            if let weakSelf = self {
+                if(error != nil){
+                    //error has occured while calling server. Inform user
+                    print(error)
+                }
+                else{
+                    //data successfully received from server.parse it and store it. then navigate to the homescreen
+                    sharedUserManager.save(user: UserModel(/* data halna baki parse garera */))
+                    
+                    weakSelf.gotoHomeScreen(controllerName: .HomeController)
+                }
+            }
+            
+        }
+    }
+    
+//MARK: - AlertDisplay
+    func alertDisplay(title:String, description:String){
+        let alertHandle = UIAlertController(title: title, message: description, preferredStyle: UIAlertControllerStyle.alert)
+        let alertActionHandle = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+        alertHandle.addAction(alertActionHandle)
+        self.present(alertHandle,animated:true)
+    }
+    
     
 //MARK: - Goto home screen
     
