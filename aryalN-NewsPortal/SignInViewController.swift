@@ -8,6 +8,7 @@
 
 import UIKit
 import SWRevealViewController
+
 class SignInViewController: UIViewController {
 
 //MARK: - Outlets

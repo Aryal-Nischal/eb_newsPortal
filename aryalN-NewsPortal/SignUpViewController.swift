@@ -27,13 +27,7 @@ class SignUpViewController: UIViewController {
     }
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        
-        signupButton.layer.cornerRadius = signupButton.bounds.size.height / 2.0
-        editTextField(usernameTextfield)
-        editTextField(emailTextField)
-        editTextField(passwordTextField)
-        editTextField(confirmPasswordTextfield)
-        
+        self.editingView()
     }
 
 //MARK: - Button Methods
@@ -45,9 +39,54 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signupButtonPressed(_ sender: AnyObject) {
+        let checkRegistration = RegisterModel(username: usernameTextfield.text!, password: passwordTextField.text!, confirmPassword: confirmPasswordTextfield.text!, email: emailTextField.text!)
+        checkRegistration.validate {[weak self] (result, error) in
+            if let wself = self {
+                if(error != nil){
+                    //error occured
+                    print(error)
+                }
+                else{
+                    wself.startCallingServer(user:checkRegistration)
+                }
+            }
+        }
+    }
+    
+    func startCallingServer(user:RegisterModel){
+        user.callServerForRegistration { [weak self](result, error) in
+            if let weakSelf = self{
+                if(error != nil){
+                    //error occured
+                    print(error)
+                }
+                else{
+                    //registration success. proceed to login screen
+                }
+            }
+        }
     }
     
 //MARK: - View Editing Methods
+    
+    func editingView(){
+        customNavBarCreation()
+        signupButton.layer.cornerRadius = signupButton.bounds.size.height / 2.0
+        editTextField(usernameTextfield)
+        editTextField(emailTextField)
+        editTextField(passwordTextField)
+        editTextField(confirmPasswordTextfield)
+    }
+    
+    //For making navigation bar transparent
+    func customNavBarCreation(){
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = UIColor.clear
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white, NSFontAttributeName:UIFont(name:"Exo-Medium",size:18)!]
+    }
     
     func editTextField(_ textfield:UITextField!){
         //Changing placeholder color

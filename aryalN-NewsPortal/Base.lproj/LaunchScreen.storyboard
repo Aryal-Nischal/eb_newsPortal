@@ -19,29 +19,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgImage_sample" translatesAutoresizingMaskIntoConstraints="NO" id="rKu-FR-fmD"/>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEWS PORTAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITA-WN-RWq">
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="50"/>
-                                <color key="textColor" red="1" green="0.17898375999999999" blue="0.33925259299999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchImage" translatesAutoresizingMaskIntoConstraints="NO" id="4DZ-bi-Dor">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="1" green="0.17898375999999999" blue="0.33925259299999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="JL5-bu-DD3"/>
+                                    <constraint firstAttribute="width" constant="333" id="kyy-cO-IIf"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="rKu-FR-fmD" secondAttribute="bottom" id="EFu-hg-UPX"/>
-                            <constraint firstItem="ITA-WN-RWq" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="GHF-SK-xHT"/>
-                            <constraint firstItem="ITA-WN-RWq" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="VV4-3f-UyH"/>
+                            <constraint firstItem="4DZ-bi-Dor" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="dLH-oA-BUo"/>
                             <constraint firstItem="rKu-FR-fmD" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="hp7-ft-NRM"/>
                             <constraint firstItem="rKu-FR-fmD" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="i4U-DP-met"/>
+                            <constraint firstItem="4DZ-bi-Dor" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="iV3-Ib-7Lb"/>
                             <constraint firstAttribute="trailing" secondItem="rKu-FR-fmD" secondAttribute="trailing" id="yXQ-9u-7NY"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="337" y="385"/>
+            <point key="canvasLocation" x="-1" y="426"/>
         </scene>
     </scenes>
     <resources>
         <image name="bgImage_sample" width="745" height="1334"/>
+        <image name="launchImage" width="333" height="65"/>
     </resources>
 </document>

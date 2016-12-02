@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		7938BEC2885DA466A8C1F89C /* Pods_aryalN_NewsPortalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A786AF7E00DE9D58BED8CD /* Pods_aryalN_NewsPortalTests.framework */; };
 		A45C27763EBBC408A4456A45 /* Pods_aryalN_NewsPortal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5233630B2D53415463D717CF /* Pods_aryalN_NewsPortal.framework */; };
+		D801B6961DF114340072CFBC /* NewsPortal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D801B6941DF114340072CFBC /* NewsPortal.storyboard */; };
+		D801B6981DF118250072CFBC /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D801B6971DF118250072CFBC /* RegisterModel.swift */; };
+		D801B69A1DF118350072CFBC /* RegisterValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D801B6991DF118350072CFBC /* RegisterValidation.swift */; };
+		D801B69C1DF118430072CFBC /* RegisterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D801B69B1DF118430072CFBC /* RegisterManager.swift */; };
 		D809A78C1DE537CB00EC1F61 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D809A78B1DE537CB00EC1F61 /* SignInViewController.swift */; };
 		D80F3B841DEE9B4A006D01E9 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F3B831DEE9B4A006D01E9 /* FavouritesViewController.swift */; };
 		D80F3B881DEEC3A6006D01E9 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80F3B871DEEC3A6006D01E9 /* ProfileTableViewController.swift */; };
@@ -64,6 +68,10 @@
 		58C13F12F5D1C998F4C02456 /* Pods-aryalN-NewsPortalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aryalN-NewsPortalTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aryalN-NewsPortalTests/Pods-aryalN-NewsPortalTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C07361C41F41F93AA8334B6B /* Pods_aryalN_NewsPortalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aryalN_NewsPortalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A786AF7E00DE9D58BED8CD /* Pods_aryalN_NewsPortalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aryalN_NewsPortalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D801B6951DF114340072CFBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NewsPortal.storyboard; sourceTree = "<group>"; };
+		D801B6971DF118250072CFBC /* RegisterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		D801B6991DF118350072CFBC /* RegisterValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterValidation.swift; sourceTree = "<group>"; };
+		D801B69B1DF118430072CFBC /* RegisterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterManager.swift; sourceTree = "<group>"; };
 		D809A78B1DE537CB00EC1F61 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D80F3B831DEE9B4A006D01E9 /* FavouritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		D80F3B871DEEC3A6006D01E9 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
@@ -240,6 +248,9 @@
 		D823CCF11DE4650C00B0779F /* All Views */ = {
 			isa = PBXGroup;
 			children = (
+				D8BC8F041DEFCF9D000D4713 /* Main.storyboard */,
+				D801B6941DF114340072CFBC /* NewsPortal.storyboard */,
+				D8BC8F011DEFCF97000D4713 /* LaunchScreen.storyboard */,
 			);
 			name = "All Views";
 			sourceTree = "<group>";
@@ -247,8 +258,6 @@
 		D823CCF31DE4654400B0779F /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				D8BC8F041DEFCF9D000D4713 /* Main.storyboard */,
-				D8BC8F011DEFCF97000D4713 /* LaunchScreen.storyboard */,
 				D823CCEA1DE462C300B0779F /* AppFonts */,
 				D823CCBC1DE45EE900B0779F /* AppDelegate.swift */,
 				D823CCC81DE45EE900B0779F /* Info.plist */,
@@ -353,6 +362,9 @@
 		D8D32ACB1DED4E9A000114CB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D801B6971DF118250072CFBC /* RegisterModel.swift */,
+				D801B6991DF118350072CFBC /* RegisterValidation.swift */,
+				D801B69B1DF118430072CFBC /* RegisterManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -519,6 +531,7 @@
 				D8BC8F061DEFCF9D000D4713 /* Main.storyboard in Resources */,
 				D8D7727A1DEEF11A0091B04D /* raidercrusaderchrome-Regular.ttf in Resources */,
 				D823CCEF1DE463B400B0779F /* Exo-Medium.otf in Resources */,
+				D801B6961DF114340072CFBC /* NewsPortal.storyboard in Resources */,
 				D823CCEE1DE463B400B0779F /* Exo-Bold.otf in Resources */,
 				D8BC8F031DEFCF97000D4713 /* LaunchScreen.storyboard in Resources */,
 				D823CCF01DE463B400B0779F /* Exo-Regular.otf in Resources */,
@@ -681,9 +694,12 @@
 				D838F50F1DE5A3FC008773C7 /* SignUpViewController.swift in Sources */,
 				D8BC8F0F1DEFECDE000D4713 /* UserValidation.swift in Sources */,
 				D8D32AC51DED40B8000114CB /* StringStorage.swift in Sources */,
+				D801B69A1DF118350072CFBC /* RegisterValidation.swift in Sources */,
 				D809A78C1DE537CB00EC1F61 /* SignInViewController.swift in Sources */,
 				D8D32AC11DED349F000114CB /* Helper.swift in Sources */,
+				D801B6981DF118250072CFBC /* RegisterModel.swift in Sources */,
 				D80F3B841DEE9B4A006D01E9 /* FavouritesViewController.swift in Sources */,
+				D801B69C1DF118430072CFBC /* RegisterManager.swift in Sources */,
 				D838F5121DE5BD49008773C7 /* SigningNavigationViewController.swift in Sources */,
 				D8BC8F091DEFE0A1000D4713 /* Protocols.swift in Sources */,
 			);
@@ -722,6 +738,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		D801B6941DF114340072CFBC /* NewsPortal.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D801B6951DF114340072CFBC /* Base */,
+			);
+			name = NewsPortal.storyboard;
+			sourceTree = "<group>";
+		};
 		D8BC8F011DEFCF97000D4713 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
