@@ -29,6 +29,7 @@
 		D823CCF01DE463B400B0779F /* Exo-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D823CCED1DE463B400B0779F /* Exo-Regular.otf */; };
 		D838F50F1DE5A3FC008773C7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838F50E1DE5A3FC008773C7 /* SignUpViewController.swift */; };
 		D838F5121DE5BD49008773C7 /* SigningNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838F5111DE5BD48008773C7 /* SigningNavigationViewController.swift */; };
+		D8A954781DF5200B00E48001 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A954771DF5200B00E48001 /* ProfileTableViewCell.swift */; };
 		D8BC8F031DEFCF97000D4713 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8BC8F011DEFCF97000D4713 /* LaunchScreen.storyboard */; };
 		D8BC8F061DEFCF9D000D4713 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8BC8F041DEFCF9D000D4713 /* Main.storyboard */; };
 		D8BC8F091DEFE0A1000D4713 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BC8F081DEFE0A1000D4713 /* Protocols.swift */; };
@@ -96,6 +97,7 @@
 		D823CCED1DE463B400B0779F /* Exo-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo-Regular.otf"; sourceTree = "<group>"; };
 		D838F50E1DE5A3FC008773C7 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D838F5111DE5BD48008773C7 /* SigningNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigningNavigationViewController.swift; sourceTree = "<group>"; };
+		D8A954771DF5200B00E48001 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		D8BC8F021DEFCF97000D4713 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8BC8F051DEFCF9D000D4713 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8BC8F081DEFE0A1000D4713 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 			children = (
 				D8210D991DE856C900A1ABC2 /* UserPageProfileViewController.swift */,
 				D80F3B871DEEC3A6006D01E9 /* ProfileTableViewController.swift */,
+				D8A954771DF5200B00E48001 /* ProfileTableViewCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -720,6 +723,7 @@
 				D801B69A1DF118350072CFBC /* RegisterValidation.swift in Sources */,
 				D809A78C1DE537CB00EC1F61 /* SignInViewController.swift in Sources */,
 				D8D32AC11DED349F000114CB /* Helper.swift in Sources */,
+				D8A954781DF5200B00E48001 /* ProfileTableViewCell.swift in Sources */,
 				D801B6981DF118250072CFBC /* RegisterModel.swift in Sources */,
 				D80F3B841DEE9B4A006D01E9 /* FavouritesViewController.swift in Sources */,
 				D801B69C1DF118430072CFBC /* RegisterManager.swift in Sources */,

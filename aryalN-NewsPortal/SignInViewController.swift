@@ -21,6 +21,7 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.gotoHomeScreen(controllerName: .UserProfileController)
     }
     
     override func viewWillLayoutSubviews() {
@@ -37,7 +38,7 @@ class SignInViewController: UIViewController {
 //MARK: - Button Methods
     
     @IBAction func signinButtonPressed(_ sender: AnyObject) {
-
+        
         let userModelObject = UserModel(email: usernameTextfield.text!, password: passwordTextfield.text!)
         userModelObject.validate {[weak self] (result, error) in
             if let weakSelf = self{
@@ -84,7 +85,8 @@ class SignInViewController: UIViewController {
                     print(UserDefaults.standard.dictionaryRepresentation())
                     weakSelf.alertDisplay(title: "Server Success", description: "Wohoo")
 
-                    weakSelf.gotoHomeScreen(controllerName: .HomeController)
+                    weakSelf.gotoHomeScreen(controllerName: .UserProfileController)
+                    //.HomeController
                 }
             }
         }

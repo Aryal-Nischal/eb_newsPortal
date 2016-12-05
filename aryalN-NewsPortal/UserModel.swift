@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 class UserModel: NSObject , NSCoding {
     
     //MARK: - Variables
@@ -71,7 +72,6 @@ class UserModel: NSObject , NSCoding {
     
    
 }
-
 
 
 
