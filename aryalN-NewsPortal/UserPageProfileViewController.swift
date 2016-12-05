@@ -12,18 +12,26 @@ class UserPageProfileViewController: UIViewController, UITableViewDelegate, UITa
 
 //MARK: - Array for label and placeholder name
     let nameArrayForLabels = ["Name","E-mail","Password","ConfirmPassword"]
-    let nameArrayForText = ["username","email","password","confirmPassword"]
+    var nameArrayForText = [String]()
     var isInteractionEnabled = false
+    var totalItemsInTable:Int = 0
+    
+//MARK: - Outlets
     
     @IBOutlet weak var profileTableView: UITableView!
     @IBOutlet weak var profileEditingButton: UIBarButtonItem!
+    @IBOutlet weak var doneEditingButton: UIBarButtonItem!
+    
+    
 //MARK: - View Lifecycle Function
     
     override func viewDidLoad() {
         super.viewDidLoad()
         profileTableView.dataSource = self
         profileTableView.delegate = self
-        
+        doneEditingButton.isEnabled = false
+        doneEditingButton.tintColor = UIColor.clear
+        totalItemsInTable = nameArrayForLabels.count - 1
         revealRearView()
         
     }
@@ -35,35 +43,42 @@ class UserPageProfileViewController: UIViewController, UITableViewDelegate, UITa
     }
     
 //MARK: - For table view delegate and datasource
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return nameArrayForLabels.count
+        return totalItemsInTable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "profileTableCell") as? ProfileTableViewCell
         
         cell?.profileCellLabel.text = nameArrayForLabels[indexPath.row]
-        cell?.profileCellTextField.text = nameArrayForText[indexPath.row]
+        //cell?.profileCellTextField.text = nameArrayForText[indexPath.row]
+        
         if (isInteractionEnabled == true){
             cell?.profileCellTextField.isUserInteractionEnabled = true
+            //cell?.handleTextField(text: "a")
+            
+        }
+        else{
+            cell?.profileCellTextField.isUserInteractionEnabled = false
+            //cell?.handleTextField(text: "B")
         }
         
         return cell!
     }
-
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        //test
-    }
     
-    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
-        //test
-    }
-
+//MARK: - Navbar Action Methods
+    
     @IBAction func editProfileButtonPressed(_ sender: AnyObject) {
-        isInteractionEnabled = true
+        layoutViewForTextfieldEditing(1)
         profileTableView.reloadData()
     }
     
+    //if problem arises check linking
+    @IBAction func doneEditingButtonPressed(_ sender: AnyObject) {
+        layoutViewForTextfieldEditing(2)
+        profileTableView.reloadData()
+    }
     
     //MARK: - Custom Button Method
     
@@ -91,8 +106,25 @@ class UserPageProfileViewController: UIViewController, UITableViewDelegate, UITa
         self.revealViewController().rearViewRevealOverdraw = CGFloat(0.0)
     }
     
-//MARK: - Disabling and Enabling the textfield
-    func disableTextfield(){
+//MARK: - View During TextField Edit 
+    func layoutViewForTextfieldEditing(_ id:Int){
+        if(id == 1){
+            isInteractionEnabled = true
+            totalItemsInTable = totalItemsInTable + 1
+            doneEditingButton.isEnabled = true
+            doneEditingButton.tintColor = UIColor.white
+            profileEditingButton.isEnabled = false
+            profileTableView.tintColor = UIColor.clear
+            
+        }
+        else{
+            isInteractionEnabled = false
+            totalItemsInTable = totalItemsInTable - 1
+            doneEditingButton.isEnabled = false
+            doneEditingButton.tintColor = UIColor.clear
+            profileEditingButton.isEnabled = true
+            profileEditingButton.tintColor = UIColor.white
+        }
     }
 
 }

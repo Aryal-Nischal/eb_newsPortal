@@ -21,7 +21,7 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.gotoHomeScreen(controllerName: .UserProfileController)
+        self.gotoHomeScreen(controllerName: .UserProfileController)
     }
     
     override func viewWillLayoutSubviews() {

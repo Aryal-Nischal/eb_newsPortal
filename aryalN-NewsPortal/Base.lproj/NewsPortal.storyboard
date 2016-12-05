@@ -6,6 +6,7 @@
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -369,13 +370,9 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="786 followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhr-MC-1hd">
-                                <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="I9e-d0-kzC">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="profileTableCell" id="eht-Sr-WzD" customClass="ProfileTableViewCell" customModule="aryalN_NewsPortal" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -389,8 +386,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CAm-Py-Xo0">
-                                                    <color key="backgroundColor" red="1" green="0.8662104182" blue="0.87459107840000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CAm-Py-Xo0">
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="195" id="K80-Ab-Tc6"/>
                                                     </constraints>
@@ -416,32 +413,37 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="786 followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhr-MC-1hd">
+                                <fontDescription key="fontDescription" name="Exo-Regular" family="Exo" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Nhr-MC-1hd" firstAttribute="leading" secondItem="yoM-kK-6vM" secondAttribute="leadingMargin" constant="-7" id="3kp-K9-jkq"/>
+                            <constraint firstItem="Nhr-MC-1hd" firstAttribute="leading" secondItem="yoM-kK-6vM" secondAttribute="leadingMargin" constant="-10" id="3kp-K9-jkq"/>
                             <constraint firstItem="3Tl-SP-8K9" firstAttribute="trailing" secondItem="I9e-d0-kzC" secondAttribute="trailing" id="7oG-Q5-4Pd"/>
-                            <constraint firstItem="I9e-d0-kzC" firstAttribute="top" secondItem="sbB-sv-Gd4" secondAttribute="bottom" constant="8" symbolic="YES" id="9i5-Ee-SjI"/>
-                            <constraint firstItem="I9e-d0-kzC" firstAttribute="top" secondItem="3Tl-SP-8K9" secondAttribute="bottom" constant="51" id="Bf5-4d-gnM"/>
+                            <constraint firstItem="I9e-d0-kzC" firstAttribute="top" secondItem="sbB-sv-Gd4" secondAttribute="bottom" constant="21" id="9i5-Ee-SjI"/>
+                            <constraint firstItem="I9e-d0-kzC" firstAttribute="top" secondItem="3Tl-SP-8K9" secondAttribute="bottom" constant="78" id="Bf5-4d-gnM"/>
                             <constraint firstAttribute="trailing" secondItem="3Tl-SP-8K9" secondAttribute="trailing" id="BgV-zW-CMn"/>
-                            <constraint firstItem="kTs-1n-VEL" firstAttribute="top" secondItem="CoN-gy-Mm3" secondAttribute="top" id="CL6-yn-NnA"/>
-                            <constraint firstItem="Nhr-MC-1hd" firstAttribute="top" secondItem="kTs-1n-VEL" secondAttribute="bottom" constant="8" symbolic="YES" id="FaZ-yF-CtA"/>
+                            <constraint firstItem="kTs-1n-VEL" firstAttribute="top" secondItem="CoN-gy-Mm3" secondAttribute="top" constant="1" id="CL6-yn-NnA"/>
+                            <constraint firstItem="Nhr-MC-1hd" firstAttribute="top" secondItem="kTs-1n-VEL" secondAttribute="bottom" constant="7" id="FaZ-yF-CtA"/>
                             <constraint firstItem="Eh6-WQ-6VJ" firstAttribute="baseline" secondItem="Nhr-MC-1hd" secondAttribute="firstBaseline" id="GeS-lf-bLd"/>
                             <constraint firstItem="Nhr-MC-1hd" firstAttribute="baseline" secondItem="Eh6-WQ-6VJ" secondAttribute="baseline" id="KD2-oE-awZ"/>
                             <constraint firstItem="3Tl-SP-8K9" firstAttribute="top" secondItem="yoM-kK-6vM" secondAttribute="top" id="O06-fV-q6N"/>
-                            <constraint firstItem="kTs-1n-VEL" firstAttribute="leading" secondItem="yoM-kK-6vM" secondAttribute="leadingMargin" constant="52" id="Pkh-nP-TRD"/>
-                            <constraint firstItem="sbB-sv-Gd4" firstAttribute="top" secondItem="wy9-1v-B5C" secondAttribute="bottom" constant="108" id="TUK-Hd-Zfj"/>
+                            <constraint firstItem="kTs-1n-VEL" firstAttribute="leading" secondItem="yoM-kK-6vM" secondAttribute="leadingMargin" constant="51" id="Pkh-nP-TRD"/>
+                            <constraint firstItem="sbB-sv-Gd4" firstAttribute="top" secondItem="wy9-1v-B5C" secondAttribute="bottom" constant="207" id="TUK-Hd-Zfj"/>
                             <constraint firstItem="I9e-d0-kzC" firstAttribute="bottom" secondItem="Wzm-fE-QUe" secondAttribute="top" id="UGh-0g-6O4"/>
                             <constraint firstItem="3Tl-SP-8K9" firstAttribute="centerX" secondItem="sbB-sv-Gd4" secondAttribute="centerX" id="Uje-5D-qp1"/>
-                            <constraint firstItem="sbB-sv-Gd4" firstAttribute="leading" secondItem="Nhr-MC-1hd" secondAttribute="trailing" constant="7" id="VHN-Mg-NED"/>
-                            <constraint firstItem="sbB-sv-Gd4" firstAttribute="leading" secondItem="kTs-1n-VEL" secondAttribute="trailing" constant="26" id="XLc-Gm-cna"/>
-                            <constraint firstItem="Eh6-WQ-6VJ" firstAttribute="leading" secondItem="sbB-sv-Gd4" secondAttribute="trailing" constant="7" id="YQp-Ri-9t9"/>
-                            <constraint firstItem="I9e-d0-kzC" firstAttribute="top" secondItem="Nhr-MC-1hd" secondAttribute="bottom" constant="61" id="ZMe-M5-tNe"/>
+                            <constraint firstItem="sbB-sv-Gd4" firstAttribute="leading" secondItem="Nhr-MC-1hd" secondAttribute="trailing" constant="2" id="VHN-Mg-NED"/>
+                            <constraint firstItem="sbB-sv-Gd4" firstAttribute="leading" secondItem="kTs-1n-VEL" secondAttribute="trailing" constant="27" id="XLc-Gm-cna"/>
+                            <constraint firstItem="Eh6-WQ-6VJ" firstAttribute="leading" secondItem="sbB-sv-Gd4" secondAttribute="trailing" constant="8" id="YQp-Ri-9t9"/>
+                            <constraint firstItem="I9e-d0-kzC" firstAttribute="top" secondItem="Nhr-MC-1hd" secondAttribute="bottom" constant="85" id="ZMe-M5-tNe"/>
                             <constraint firstItem="3Tl-SP-8K9" firstAttribute="leading" secondItem="yoM-kK-6vM" secondAttribute="leading" id="ZjS-rX-fYX"/>
-                            <constraint firstItem="kTs-1n-VEL" firstAttribute="top" secondItem="wy9-1v-B5C" secondAttribute="bottom" constant="119" id="b0P-W4-aFD"/>
+                            <constraint firstItem="kTs-1n-VEL" firstAttribute="top" secondItem="wy9-1v-B5C" secondAttribute="bottom" constant="208" id="b0P-W4-aFD"/>
                             <constraint firstItem="3Tl-SP-8K9" firstAttribute="leading" secondItem="I9e-d0-kzC" secondAttribute="leading" id="gWB-iq-piT"/>
-                            <constraint firstItem="CoN-gy-Mm3" firstAttribute="leading" secondItem="sbB-sv-Gd4" secondAttribute="trailing" constant="26" id="jFZ-J2-qXT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Eh6-WQ-6VJ" secondAttribute="trailing" constant="-8" id="sfe-Yz-u8l"/>
+                            <constraint firstItem="CoN-gy-Mm3" firstAttribute="leading" secondItem="sbB-sv-Gd4" secondAttribute="trailing" constant="29" id="jFZ-J2-qXT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Eh6-WQ-6VJ" secondAttribute="trailing" constant="-9" id="sfe-Yz-u8l"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="fa8-ox-Izx">
@@ -451,15 +453,24 @@
                                 <action selector="navbarButton:" destination="tqK-A7-Ci9" id="PKK-eH-bGc"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="compose" id="bd8-Uj-FVm">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="editProfileButtonPressed:" destination="tqK-A7-Ci9" id="Wp5-J1-NyJ"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem style="done" systemItem="compose" id="bd8-Uj-FVm">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="editProfileButtonPressed:" destination="tqK-A7-Ci9" id="Wp5-J1-NyJ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="done" id="UFl-WY-jJO">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="doneEditingButtonPressed:" destination="tqK-A7-Ci9" id="SwG-HG-UaH"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="doneEditingButton" destination="UFl-WY-jJO" id="DUE-FO-muI"/>
                         <outlet property="profileEditingButton" destination="bd8-Uj-FVm" id="Qfd-4L-Nx6"/>
                         <outlet property="profileTableView" destination="I9e-d0-kzC" id="NA4-jW-b1M"/>
                     </connections>
