@@ -39,7 +39,7 @@ class RegisterValidation:Validable{
     
     func areAllFieldsValid(dataValidity:successClosureHandler){
         var success = true
-        var errorMessage = "Congrats"
+        var errorMessage = ""
         
         if (!isUsernameValid()){
             errorMessage = "Invalid Username. Must be atleast 6 characters"

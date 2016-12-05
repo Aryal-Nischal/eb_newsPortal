@@ -10,8 +10,8 @@ import Foundation
 
 enum Storyboards : String{
     
-    case Userboard
-    case Newsboard
+    case Main
+    case NewsPortal
     
 }
 
@@ -25,9 +25,13 @@ enum ControllerIdentity : String{
     
 }
 
+
+
+
 enum DefaultKeys:String {
     
     case username
+    case password
     case userEmail
     case userAccessCode
     case appuser
@@ -46,10 +50,9 @@ enum RegexConst:String{
 enum ForServerCall:String{
     
     case currentDeviceID = "CurrentDeviceIdentifierString"
-    case domain = "http://192.168.0.180/ci/BookRest/test/"
+    case domain = "http://192.168.0.180/webSerEx/login/loginRest/"
     
 }
-
 enum Trigger:String{
 
     case login

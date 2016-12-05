@@ -38,34 +38,21 @@ class SignInViewController: UIViewController {
     
     @IBAction func signinButtonPressed(_ sender: AnyObject) {
 
-        let userValidateObject = UserValidation(username: usernameTextfield.text!, password: passwordTextfield.text!)
-        userValidateObject.areAllFieldsValid { [weak self](result, error) in
+        let userModelObject = UserModel(email: usernameTextfield.text!, password: passwordTextfield.text!)
+        userModelObject.validate {[weak self] (result, error) in
             if let weakSelf = self{
                 
                 if(result == true){
                     //Success validating go to server for data
-                    weakSelf.callServerForData()
+                    weakSelf.callServerForData(user:userModelObject)
                 }
                 else{
                     //give user reason for failure
-                    weakSelf.alertDisplay(title: "Error", description: error)
+                    weakSelf.alertDisplay(title: "Error", description: error!)
                 }
                 
             }
         }
-        
-//        let object = UserValidation(username: usernameTextfield.text!,password: passwordTextfield.text!)
-//        let userObject = UserModel(username: usernameTextfield.text!)
-//        
-//        object.areAllFieldsValid {[weak self] (success, error) in
-//            if let weakSelf = self{
-//                if(success){
-//                    userObject.save()
-//                    weakSelf.gotoHomeScreen(controllerName: .HomeController)
-//                }
-//                else{print(error)}
-//            }
-//        }
     }
     
     @IBAction func signupButtonPressed(_ sender: AnyObject) {
@@ -75,33 +62,38 @@ class SignInViewController: UIViewController {
     
 //MARK: - Custom Methods
     
-    func callServerForData(){
-        sharedUserManager.Login(validUsername:usernameTextfield.text!,validPassword:passwordTextfield.text!){
-            [weak self](data,error) in
+    func callServerForData(user:UserModel){
+        user.login { [weak self] (data, error) in
             if let weakSelf = self {
                 if(error != nil){
                     //error has occured while calling server. Inform user
-                    print(error)
+                    weakSelf.alertDisplay(title: "Server Error", description: error!)
                 }
                 else{
                     //data successfully received from server.parse it and store it. then navigate to the homescreen
-                    sharedUserManager.save(user: UserModel(/* data halna baki parse garera */))
                     
+//                    {
+//                        key = 8c8ss4os08s0s8s044ooooswc8cok888wgo8o0wo;
+//                        status = "Login Successful";
+//                    }
+                    
+                    sharedUserManager.save(user: UserModel())
+                    weakSelf.alertDisplay(title: "Server Success", description: "Wohoo")
+
                     weakSelf.gotoHomeScreen(controllerName: .HomeController)
                 }
             }
-            
         }
     }
     
 //MARK: - AlertDisplay
+    
     func alertDisplay(title:String, description:String){
         let alertHandle = UIAlertController(title: title, message: description, preferredStyle: UIAlertControllerStyle.alert)
         let alertActionHandle = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
         alertHandle.addAction(alertActionHandle)
         self.present(alertHandle,animated:true)
     }
-    
     
 //MARK: - Goto home screen
     

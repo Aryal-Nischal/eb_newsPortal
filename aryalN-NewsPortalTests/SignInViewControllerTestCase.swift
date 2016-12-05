@@ -21,16 +21,6 @@ class SignInViewControllerTestCase: XCTestCase {
         super.tearDown()
     }
     
-    func testcheckingPasswordValidity(){
-        let validatingObject = ValidateUser(username: "a",password: "g1234e")
-        let passwordValidity = validatingObject.isPasswordValid()
-        XCTAssert(passwordValidity, "Password less than 6 characters")
-    }
-    
-    func testcheckingUsernameValidity(){
-        let validatingObject = ValidateUser(username: "nischal@google.com",password: "g1234e")
-        let usernameValidity = validatingObject.isUsernameValid()
-        XCTAssert(usernameValidity, "Username is not email")
-    }
+   
     
 }

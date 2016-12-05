@@ -15,32 +15,27 @@ typealias successClosureHandler = (_ success: Bool,_ error:String)->()
 class UserValidation: Validable {
     
     //MARK: - Variables
-    var username = String()
-    var password = String()
+    var user: UserModel?
+    
     
     //MARK: - Initializer
-    init(username:String, password:String){
-        self.username = username
-        self.password = password
+    init(user:UserModel){
+        self.user = user
     }
-    
-    
-    
+
     
     //MARK: - Validate Methods
-    
     func isUsernameValid() -> Bool{
-        
         let validEmail = NSPredicate(format:"SELF MATCHES %@", RegexConst.Email.rawValue)
-        
-        return validEmail.evaluate(with: self.username)
+        return validEmail.evaluate(with: user!.email)
     }
+    
     
     func isPasswordValid() -> Bool{
-        
         let validPassword = NSPredicate(format:"SELF MATCHES %@", RegexConst.Password.rawValue as String)
-        return validPassword.evaluate(with: self.password)
+        return validPassword.evaluate(with: user!.password)
     }
+    
     
     func areAllFieldsValid(dataValidity:successClosureHandler){
         var success = true
@@ -54,10 +49,7 @@ class UserValidation: Validable {
             errorMessage = "Invalid Password length. Password must be minimum 6 characters in length"
             success = false
         }
-        
         dataValidity(success,errorMessage)
-        
     }
-    
 }
 

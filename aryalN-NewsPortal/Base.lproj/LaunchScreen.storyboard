@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgImage_sample" translatesAutoresizingMaskIntoConstraints="NO" id="rKu-FR-fmD"/>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchImage" translatesAutoresizingMaskIntoConstraints="NO" id="4DZ-bi-Dor">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchImagepink" translatesAutoresizingMaskIntoConstraints="NO" id="4DZ-bi-Dor">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="1" green="0.17898375999999999" blue="0.33925259299999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -46,6 +46,6 @@
     </scenes>
     <resources>
         <image name="bgImage_sample" width="745" height="1334"/>
-        <image name="launchImage" width="333" height="65"/>
+        <image name="launchImagepink" width="333" height="65"/>
     </resources>
 </document>

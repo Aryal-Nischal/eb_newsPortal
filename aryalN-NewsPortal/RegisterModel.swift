@@ -24,15 +24,13 @@ class RegisterModel{
     
     func validate(sendResult:(_ success:Bool,_ error:String?)->()){
         let validationObject = RegisterValidation(user:self)
-        validationObject.areAllFieldsValid { (result, error) in
-            sendResult(result,error)
+        validationObject.areAllFieldsValid { (boolResult, error) in
+            sendResult(boolResult,error)
         }
     }
     
-    func callServerForRegistration(registerResult:@escaping (_ result:Any?,_ error:String?)->()){
-        sharedRegisterManager.Register(user:self) { (result, error) in
-            registerResult(result,error)
-        }
+    func callServerForRegistration(registerResult:@escaping RegistrationResult){
+        sharedRegisterManager.Register(user: self, dataCarryingClosure: registerResult)
     }
 
 }

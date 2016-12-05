@@ -40,11 +40,12 @@ class SignUpViewController: UIViewController {
     
     @IBAction func signupButtonPressed(_ sender: AnyObject) {
         let checkRegistration = RegisterModel(username: usernameTextfield.text!, password: passwordTextField.text!, confirmPassword: confirmPasswordTextfield.text!, email: emailTextField.text!)
+        //print("from signupbuttonpressed = \(checkRegistration.username)")
         checkRegistration.validate {[weak self] (result, error) in
             if let wself = self {
-                if(error != nil){
+                if(error != ""){
                     //error occured
-                    print(error)
+                    wself.alertDisplay(title: "Validation Error", description: error!)
                 }
                 else{
                     wself.startCallingServer(user:checkRegistration)
@@ -58,14 +59,24 @@ class SignUpViewController: UIViewController {
             if let weakSelf = self{
                 if(error != nil){
                     //error occured
-                    print(error)
+                    weakSelf.alertDisplay(title: "Server Error", description: error!)
                 }
                 else{
                     //registration success. proceed to login screen
+                    weakSelf.alertDisplay(title: "Validation Error", description: "Success")
                 }
             }
         }
     }
+  
+//MARK: - AlertDisplay
+    func alertDisplay(title:String, description:String){
+        let alertHandle = UIAlertController(title: title, message: description, preferredStyle: UIAlertControllerStyle.alert)
+        let alertActionHandle = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+        alertHandle.addAction(alertActionHandle)
+        self.present(alertHandle,animated:true)
+    }
+
     
 //MARK: - View Editing Methods
     

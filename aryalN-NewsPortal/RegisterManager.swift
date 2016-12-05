@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 typealias RegistrationResult = (_ data:Any? ,_ error:String?)->()
 
@@ -18,21 +19,21 @@ class RegisterManager{
     //validated data have arrived. make them parameter and call server for registration
     
     func Register(user:RegisterModel,dataCarryingClosure:@escaping RegistrationResult){
-        let url = FullDomainName.fullname(.login).description    //Your url
-        print(url)
+        let url = FullDomainName.fullname(.register).description
         
-        //        ERROR BECAUSE NO PARAMETER PROVIDED
-        //        Alamofire.request(url, method: .post, parameters: nil, encoding: URLEncoding.default, headers: nil){
-        //        response in
-        //            if(response.result == .success){
-        //                //data has arrived. save them to cache to avoid future server call until logout takes place
-        //                dataCarryingClosure(data,nil)
-        //            }
-        //            else{
-        //                //send error to be displayed
-        //                dataCarryingClosure(nil,error)
-        //            }
-        //        }
+        let sendParameter = ["username":user.username! as String,"useremail":user.email! as String,"password":user.password! as String]
+        //ERROR BECAUSE NO PARAMETER PROVIDED
+        Alamofire.request(url, method: .post, parameters: sendParameter, encoding: URLEncoding.default, headers: ["X-API-KEY":"testKey"]).responseJSON {[weak self] response in
+            
+            if let _ = self{
+                switch response.result {
+                case .success(let data):
+                    dataCarryingClosure(data,nil)
+                case .failure(let error):
+                    dataCarryingClosure(nil,error.localizedDescription)
+                }
+            }
+        }
     }
     
 }
