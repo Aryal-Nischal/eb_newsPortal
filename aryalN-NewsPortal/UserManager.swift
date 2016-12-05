@@ -9,14 +9,16 @@
 import Foundation
 import Alamofire
 
+// for to and fro data transfer
 typealias loginCarryingClosure = (_ data:Any? ,_ error:String?)->()
 
+// for single instance access
 let sharedUserManager = UserManager.instance
 
 class UserManager{
     static let instance = UserManager()
     
-   // private init(){}
+
     
     func save(user: UserModel) {
         let currentUser = NSKeyedArchiver.archivedData(withRootObject: user)
