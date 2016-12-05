@@ -54,6 +54,8 @@ class SignUpViewController: UIViewController {
         }
     }
     
+//MARK: - Server Calling Method
+    
     func startCallingServer(user:RegisterModel){
         user.callServerForRegistration { [weak self](result, error) in
             if let weakSelf = self{
@@ -70,6 +72,7 @@ class SignUpViewController: UIViewController {
     }
   
 //MARK: - AlertDisplay
+    
     func alertDisplay(title:String, description:String){
         let alertHandle = UIAlertController(title: title, message: description, preferredStyle: UIAlertControllerStyle.alert)
         let alertActionHandle = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)

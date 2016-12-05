@@ -70,14 +70,18 @@ class SignInViewController: UIViewController {
                     weakSelf.alertDisplay(title: "Server Error", description: error!)
                 }
                 else{
-                    //data successfully received from server.parse it and store it. then navigate to the homescreen
+                //data successfully received from server.parse it and store it. then navigate to the homescreen
+                    if let extractKey = data as? [String:Any?]{
+                        user.userAccessCode = extractKey["key"] as! String?
+                    }
                     
 //                    {
 //                        key = 8c8ss4os08s0s8s044ooooswc8cok888wgo8o0wo;
 //                        status = "Login Successful";
 //                    }
-                    
-                    sharedUserManager.save(user: UserModel())
+                    sharedUserManager.save(user: user)
+                    //check if data is being saved
+                    print(UserDefaults.standard.dictionaryRepresentation())
                     weakSelf.alertDisplay(title: "Server Success", description: "Wohoo")
 
                     weakSelf.gotoHomeScreen(controllerName: .HomeController)
